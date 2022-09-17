@@ -5,6 +5,7 @@ import SitoContainer from "sito-container";
 
 // components
 import Square from "../../components/Square/Square";
+import Stars from "../../components/Stars/Stars";
 
 // styles
 import "./style.css";
@@ -15,7 +16,7 @@ const Field = () => {
   useEffect(() => {
     setTimeout(() => {
       setMorning(!morning);
-    }, 4000);
+    }, 30000);
   }, [morning]);
 
   return (
@@ -26,7 +27,7 @@ const Field = () => {
         width: "100vw",
         height: "100vh",
         background: morning ? "#2a80cd" : "#100054",
-        transition: "background 4000ms linear",
+        transition: "background 15000ms linear",
       }}
     >
       <SitoContainer
@@ -44,6 +45,7 @@ const Field = () => {
           transformStyle: "preserve-3d",
         }}
       >
+        <Stars show={!morning} />
         <Square elevation={1} />
         <Square elevation={1} />
         <Square elevation={1} />

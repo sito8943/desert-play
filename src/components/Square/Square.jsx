@@ -30,7 +30,9 @@ const Square = (props) => {
       width: "1em",
       height: "1em",
     },
-    "&:hover": {},
+    "&:hover": {
+      background: "rgb(255, 255, 0)",
+    },
   };
 
   const normal = {
@@ -41,6 +43,10 @@ const Square = (props) => {
     transformOrigin: "97% 97%",
     position: "relative",
     boxShadow: "0.125em 0.125em 0.5em rgba(0, 0, 0, 0.09)",
+    cursor: "pointer",
+    "&:hover": {
+      background: "rgb(255, 255, 0)",
+    },
   };
 
   return (
